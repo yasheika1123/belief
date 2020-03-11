@@ -1,0 +1,41 @@
+---
+title: "Love vs extraterrestials"
+author: "Yasheika Pink"
+date: "Spring 2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+require(tidyverse)
+require(tigerstats)
+help("m111surveyfa13")
+mydata<-m111surveyfa13 <- na.omit(m111surveyfa13)
+```
+
+# A question of Belief
+
+Your data is in the dataframe called "mydata" examine it in the environment tab  
+do a variable analysis on the 3 Questions and then upload the appropriate Rmd template for this job.   
+Also create an empty github repository called "Belief" and make it the remote repository for  
+this assignment.  For each question supply graphical evidence, numerical summaries, an inferential test, and a conclusion.  When finished push your rmd file, your project file, and your knitted html file to your github repo.  Finally turn in to Canvas the link to your github repo.
+
+
+
+
+# Your First Question  
+
+### Do people who believe in Love at First sight also tend to believe in Life on other planets?
+
+  
+  
+    
+# Your second Question  
+
+### Is there a difference between boys and girls with respect to belief in life on other planets?
+  
+ 
+ 
+# Your last Question   
+
+### Is there a difference between boys and girls with respect to belief in love at First sight?

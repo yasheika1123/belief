@@ -27,15 +27,91 @@ this assignment.  For each question supply graphical evidence, numerical summari
 
 ### Do people who believe in Love at First sight also tend to believe in Life on other planets?
 
+$H_O$: No relation between belief in love at first sight, and belief in ET
+$H_A$: There is a relation between belief in love at first sightm and the belief in ET
+
+Graphic display
   
-  
-    
+```{r}
+barchartGC(~love_first + extra_life,data=mydata)
+```
+
+ People who believe in love at first sight, also tend believe in ET.
+ Nummerical Summary
+ 
+```{r}
+table1 <- xtabs(~love_first + extra_life, data=mydata)
+rowPerc(table1)
+colPerc(table1)
+```
+ Looks like the people who believe in love at first sight is about the same as the people of believe in ET. 
+ 
+ Inference
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
+
+We fail to reject the null hypothesis, because the p = 0.69 is greater than the P=0.05 
 # Your second Question  
 
 ### Is there a difference between boys and girls with respect to belief in life on other planets?
-  
+
+$H_O$: No relation between Gender if belief in ET
+ $H_A$: There is a relation betwenn gender in the belief in ET
+
+ graphical Summery
+```{r}
+barchartGC(~sex + extra_life,data=mydata)
+```
+ It appears that males have more belief in ET
+ 
+ Numerical Summary
+```{r}
+table1 <- xtabs(~sex + extra_life, data=mydata)
+rowPerc(table1)
+colPerc(table1)
+```
+ Summary appears that males belief in ET is greater than females.
+ 
+ Inference
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+ 
+ 
+ I fail to reject the null hypothesis because the p-value is higher than 0.05
  
  
 # Your last Question   
 
 ### Is there a difference between boys and girls with respect to belief in love at First sight?
+Graphical Summary
+```{r}
+barchartGC(~sex + love_first,data=mydata)
+```
+It appears that males do not believe in love a first sight
+
+numerical summary
+```{r}
+table1 <- xtabs(~sex + love_first, data=mydata)
+rowPerc(table1)
+colPerc(table1)
+```
+
+Summary appears that males do not believe in love at first sight.
+
+Inference
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+SH_O$: No relation between belief in love at first sight, and belief in ET
+$H_A$: There is a relation between belief in love at first sightm and the belief in ET  
+
+I fail to reject the null hypothesis. Boys do not believe in love at first sight.
